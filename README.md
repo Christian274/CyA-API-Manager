@@ -14,3 +14,32 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Troubleshooting: missing `node_modules`
+
+If you run `npm run dev` or `npm run build` and dependencies are missing, you may see errors like:
+
+- `Cannot find module ...`
+- `vite is not recognized as an internal or external command`
+
+### Fix
+
+Run from the project root:
+
+```bash
+npm ci
+```
+
+Then start again:
+
+```bash
+npm run dev
+# or
+npm run build
+```
+
+If `npm ci` fails (for example after dependency changes), run:
+
+```bash
+npm install
+```

@@ -1,5 +1,27 @@
 # Quick Start Deployment Guide
 
+## Before You Run `npm run dev` or `npm run build`
+
+If `node_modules/` is missing, install dependencies first:
+
+```bash
+npm ci
+```
+
+Then run your command:
+
+```bash
+npm run dev
+# or
+npm run build
+```
+
+If `npm ci` fails, use:
+
+```bash
+npm install
+```
+
 ## For First Deployment
 
 ### Step 1: Verify Configuration
